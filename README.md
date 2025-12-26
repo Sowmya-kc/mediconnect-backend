@@ -398,7 +398,7 @@ Common Status Codes:
 1. Clone the repository
 
 bash
-git clone https://github.com/YOUR_USERNAME/mediconnect-backend.git
+git clone https://github.com/Sowmya-kc/mediconnect-backend.git
 cd mediconnect-backend
 
 
