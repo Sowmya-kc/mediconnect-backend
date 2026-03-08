@@ -2,31 +2,36 @@
 
 > A cloud-native healthcare platform demonstrating the industrial application of cloud computing in telemedicine and patient management.
 
+[![Live Demo](https://img.shields.io/badge/demo-live-success)](https://mediconnect-api.onrender.com)
+[![Node.js](https://img.shields.io/badge/node.js-20.x-green)](https://nodejs.org/)
+[![PostgreSQL](https://img.shields.io/badge/postgresql-15-blue)](https://www.postgresql.org/)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
+---
 
 ## 📋 Table of Contents
 
-- [Overview]
-- [Features]
-- [Tech Stack]
-- [Architecture]
-- [Cloud Services]
-- [API Documentation]
-- [Installation]
-- [Environment Variables]
-- [Usage]
-- [Testing]
-- [Deployment]
-- [Security]
-- [Future Enhancements]
-- [Contributing]
+- [Overview](#overview)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Architecture](#architecture)
+- [Cloud Services](#cloud-services)
+- [API Documentation](#api-documentation)
+- [Installation](#installation)
+- [Environment Variables](#environment-variables)
+- [Usage](#usage)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Security](#security)
+- [Future Enhancements](#future-enhancements)
+- [Contributing](#contributing)
+- [License](#license)
 
-
-
+---
 
 ## 🎯 Overview
 
-MediConnect is a cloud-based telemedicine platform built to demonstrate the practical implementation of cloud computing in healthcare. The project showcases modern cloud-native development practices, including:
+**MediConnect** is a cloud-based telemedicine platform built to demonstrate the practical implementation of cloud computing in healthcare. The project showcases modern cloud-native development practices, including:
 
 - ✅ Platform-as-a-Service (PaaS) deployment
 - ✅ Database-as-a-Service (DBaaS) integration
@@ -35,22 +40,22 @@ MediConnect is a cloud-based telemedicine platform built to demonstrate the prac
 - ✅ Secure authentication with JWT
 - ✅ CI/CD pipeline with GitHub Actions
 
-Live Demo: https://mediconnect-api-48tc.onrender.com
+**Live Demo:** [https://mediconnect-api.onrender.com](https://mediconnect-api.onrender.com)
 
-
+---
 
 ## ✨ Features
 
 ### Core Features
 
-- 🔐 User Authentication - Secure JWT-based registration and login
-- 👤 Patient Management - Complete profile management with medical history
-- 👨‍⚕️ Doctor Directory - Browse available doctors with specializations
-- 📅 Appointment Booking - Schedule appointments with conflict prevention
-- 📊 Appointment History - View and manage all appointments
-- 🔒 Role-Based Access - Different permissions for patients, doctors, and admins
-- 🌐 Cloud Deployment - Fully deployed on cloud infrastructure
-- 📱 RESTful API - Well-documented endpoints for all operations
+- 🔐 **User Authentication** - Secure JWT-based registration and login
+- 👤 **Patient Management** - Complete profile management with medical history
+- 👨‍⚕️ **Doctor Directory** - Browse available doctors with specializations
+- 📅 **Appointment Booking** - Schedule appointments with conflict prevention
+- 📊 **Appointment History** - View and manage all appointments
+- 🔒 **Role-Based Access** - Different permissions for patients, doctors, and admins
+- 🌐 **Cloud Deployment** - Fully deployed on cloud infrastructure
+- 📱 **RESTful API** - Well-documented endpoints for all operations
 
 ### Technical Features
 
@@ -63,37 +68,38 @@ Live Demo: https://mediconnect-api-48tc.onrender.com
 - 🎯 Input validation
 - 📊 Performance monitoring
 
+---
 
 ## 🛠️ Tech Stack
 
 ### Backend
-- Runtime: Node.js 20.x
-- Framework: Express.js 4.18
-- Language: JavaScript (ES6+)
-- Authentication: JWT (jsonwebtoken)
-- Password Security:** Bcrypt
+- **Runtime:** Node.js 20.x
+- **Framework:** Express.js 4.18
+- **Language:** JavaScript (ES6+)
+- **Authentication:** JWT (jsonwebtoken)
+- **Password Security:** Bcrypt
 
 ### Database
-- Database: PostgreSQL 15
-- Driver: node-postgres (pg)
-- ORM: Raw SQL queries (for learning purposes)
+- **Database:** PostgreSQL 15
+- **Driver:** node-postgres (pg)
+- **ORM:** Raw SQL queries (for learning purposes)
 
 ### Cloud Services
-- Application Hosting: Render.com (PaaS)
-- Database Hosting: Railway.app (DBaaS)
-- Version Control: GitHub
-- CI/CD: GitHub + Render integration
+- **Application Hosting:** Render.com (PaaS)
+- **Database Hosting:** Railway.app (DBaaS)
+- **Version Control:** GitHub
+- **CI/CD:** GitHub + Render integration
 
 ### Development Tools
-- Code Editor: VS Code
-- API Testing: Thunder Client / Postman
-- Version Control: Git
+- **Code Editor:** VS Code
+- **API Testing:** Thunder Client / Postman
+- **Version Control:** Git
 
 ---
 
 ## 🏗️ Architecture
 
-
+```
 ┌─────────────────────────────────────────────────┐
 │              Client Applications                │
 │      (Web / Mobile / Third-party APIs)         │
@@ -128,20 +134,22 @@ Live Demo: https://mediconnect-api-48tc.onrender.com
 │  │    • Automatic Backups                │     │
 │  └───────────────────────────────────────┘     │
 └─────────────────────────────────────────────────┘
+```
 
+---
 
 ## ☁️ Cloud Services
 
 ### Railway.app (Database)
 
-Features Used:
+**Features Used:**
 - Managed PostgreSQL database
 - Automatic daily backups
 - SSL/TLS encryption
 - Connection pooling
 - 99.9% uptime SLA
 
-Configuration:
+**Configuration:**
 - Database: PostgreSQL 15
 - Region: US West
 - Storage: SSD-based
@@ -184,12 +192,12 @@ Authorization: Bearer <your_jwt_token>
 #### Authentication Endpoints
 
 ##### Register User
-http
+```http
 POST /api/auth/register
+```
 
-
-Request Body:
-json
+**Request Body:**
+```json
 {
   "email": "patient@example.com",
   "password": "SecurePassword123",
@@ -197,10 +205,10 @@ json
   "fullName": "John Doe",
   "phone": "9876543210"
 }
+```
 
-
-Response: `201 Created`
-json
+**Response:** `201 Created`
+```json
 {
   "success": true,
   "message": "Registration successful",
@@ -211,23 +219,23 @@ json
     "role": "patient"
   }
 }
-
+```
 
 ##### Login
-http
+```http
 POST /api/auth/login
+```
 
-
-Request Body:
-json
+**Request Body:**
+```json
 {
   "email": "patient@example.com",
   "password": "SecurePassword123"
 }
+```
 
-
-Response: `200 OK`
-json
+**Response:** `200 OK`
+```json
 {
   "success": true,
   "message": "Login successful",
@@ -238,18 +246,18 @@ json
     "role": "patient"
   }
 }
-
+```
 
 #### Patient Endpoints
 
 ##### Get Profile (Protected)
-http
+```http
 GET /api/patients/profile
 Authorization: Bearer <token>
+```
 
-
-Response: `200 OK`
-json
+**Response:** `200 OK`
+```json
 {
   "success": true,
   "profile": {
@@ -265,16 +273,16 @@ json
     "emergency_contact": "9876543211"
   }
 }
-
+```
 
 ##### Update Profile (Protected)
-http
+```http
 PUT /api/patients/profile
 Authorization: Bearer <token>
+```
 
-
-Request Body:
-json
+**Request Body:**
+```json
 {
   "fullName": "John Doe Updated",
   "dateOfBirth": "1995-05-15",
@@ -284,18 +292,18 @@ json
   "address": "123 Main St, Bangalore, Karnataka",
   "emergencyContact": "9876543211"
 }
+```
 
-
-Response: `200 OK`
+**Response:** `200 OK`
 
 ##### Get Doctors List (Protected)
-http
+```http
 GET /api/patients/doctors
 Authorization: Bearer <token>
+```
 
-
-Response: `200 OK`
-json
+**Response:** `200 OK`
+```json
 {
   "success": true,
   "doctors": [
@@ -310,36 +318,36 @@ json
     }
   ]
 }
-
+```
 
 #### Appointment Endpoints
 
 ##### Book Appointment (Protected)
-http
+```http
 POST /api/appointments/book
 Authorization: Bearer <token>
+```
 
-
-Request Body:
-json
+**Request Body:**
+```json
 {
   "doctorId": 1,
   "appointmentDate": "2025-10-20",
   "appointmentTime": "10:00:00",
   "symptoms": "Regular health checkup"
 }
+```
 
-
-Response: `201 Created`
+**Response:** `201 Created`
 
 ##### Get My Appointments (Protected)
-http
+```http
 GET /api/appointments
 Authorization: Bearer <token>
+```
 
-
-Response: `200 OK`
-json
+**Response:** `200 OK`
+```json
 {
   "success": true,
   "appointments": [
@@ -355,27 +363,28 @@ json
     }
   ]
 }
-
+```
 
 ##### Cancel Appointment (Protected)
-http
+```http
 PUT /api/appointments/:id/cancel
 Authorization: Bearer <token>
+```
 
-
-Response: `200 OK`
+**Response:** `200 OK`
 
 ### Error Responses
 
 All error responses follow this format:
 
-json
+```json
 {
   "success": false,
   "message": "Descriptive error message"
 }
+```
 
-Common Status Codes:
+**Common Status Codes:**
 - `400` - Bad Request (Invalid input)
 - `401` - Unauthorized (Missing/invalid token)
 - `403` - Forbidden (Insufficient permissions)
@@ -395,57 +404,59 @@ Common Status Codes:
 
 ### Local Development Setup
 
-1. Clone the repository
+1. **Clone the repository**
 
-bash
-git clone https://github.com/Sowmya-kc/mediconnect-backend.git
+```bash
+git clone https://github.com/YOUR_USERNAME/mediconnect-backend.git
 cd mediconnect-backend
+```
 
+2. **Install dependencies**
 
-2. Install dependencies
-
-bash
+```bash
 npm install
+```
 
+3. **Create `.env` file**
 
-3. Create `.env` file
-
-bash
+```bash
 cp .env.example .env
-
+```
 
 Edit `.env` with your credentials (see Environment Variables section)
 
-4. Setup Database
+4. **Setup Database**
 
 Option A: Use Railway cloud database (recommended)
 - Create PostgreSQL on Railway.app
 - Copy DATABASE_URL from Railway
 
 Option B: Local PostgreSQL
-bash
+```bash
 createdb mediconnect
+```
 
+5. **Run database migrations**
 
-5. Run database migrations
-
-bash
+```bash
 node setup-db.js
+```
 
+6. **Start development server**
 
-6. Start development server
-
-bash
+```bash
 npm run dev
+```
 
 Server will start on `http://localhost:5000`
 
+---
 
 ## 🔐 Environment Variables
 
 Create a `.env` file in the root directory:
 
-env
+```env
 # Database Configuration
 DATABASE_URL=postgresql://user:password@host:port/database
 
@@ -461,40 +472,41 @@ NODE_ENV=development
 # Optional: Email Service (if implementing)
 SENDGRID_API_KEY=your_sendgrid_api_key
 SENDER_EMAIL=noreply@mediconnect.com
+```
 
-Security Note: Never commit `.env` file to version control!
+**Security Note:** Never commit `.env` file to version control!
 
-
+---
 
 ## 💻 Usage
 
 ### Running Locally
 
-bash
+```bash
 # Development mode (with nodemon)
 npm run dev
 
 # Production mode
 npm start
+```
 
-
- Testing API
+### Testing API
 
 Use any API client:
 
-Thunder Client (VS Code):
+**Thunder Client (VS Code):**
 1. Install Thunder Client extension
 2. Import collection (if provided)
 3. Test endpoints
 
-Postman:
+**Postman:**
 1. Import Postman collection
 2. Set environment variables
 3. Test endpoints
 
-cURL Examples:
+**cURL Examples:**
 
-bash
+```bash
 # Health check
 curl https://mediconnect-api.onrender.com/health
 
@@ -516,15 +528,17 @@ curl -X POST https://mediconnect-api.onrender.com/api/auth/login \
     "email": "test@example.com",
     "password": "Test@123"
   }'
+```
 
+---
 
- 🧪 Testing
+## 🧪 Testing
 
- Manual Testing
+### Manual Testing
 
 All endpoints have been manually tested using Thunder Client.
 
-Test Coverage:
+**Test Coverage:**
 - ✅ User registration with validation
 - ✅ User login with credentials
 - ✅ JWT token generation and verification
@@ -535,32 +549,32 @@ Test Coverage:
 - ✅ Double-booking prevention
 - ✅ Appointment cancellation
 
- Performance Metrics
+### Performance Metrics
 
 - Average API response time: < 100ms
 - Database query time: < 50ms
 - Authentication overhead: ~40ms (bcrypt)
 - Concurrent users tested: 10
 
+---
 
+## 🚢 Deployment
 
-🚢 Deployment
+### Deploy to Render
 
-Deploy to Render
+1. **Push code to GitHub**
 
-1. Push code to GitHub
-
-bash
+```bash
 git add .
 git commit -m "Initial commit"
 git push origin main
+```
 
-
-2. Create Render account
+2. **Create Render account**
    - Go to render.com
    - Sign up with GitHub
 
-3. Create Web Service
+3. **Create Web Service**
    - Click "New +" → "Web Service"
    - Connect GitHub repository
    - Name: `mediconnect-api`
@@ -568,17 +582,17 @@ git push origin main
    - Build Command: `npm install`
    - Start Command: `node src/server.js`
 
-4. Add Environment Variables
+4. **Add Environment Variables**
    - DATABASE_URL
    - JWT_SECRET
    - PORT (use 10000 for Render)
    - NODE_ENV=production
 
-5. Deploy!
+5. **Deploy!**
    - Render will automatically deploy
    - Get your public URL
 
- CI/CD Pipeline
+### CI/CD Pipeline
 
 Automatic deployment on every push to `main` branch:
 
@@ -590,25 +604,26 @@ Automatic deployment on every push to `main` branch:
 6. Tests run (if configured)
 7. Deployed with zero downtime
 
+---
 
- 🔒 Security
+## 🔒 Security
 
- Authentication & Authorization
+### Authentication & Authorization
 
-- Password Security: Bcrypt hashing with 10 salt rounds
-- JWT Tokens: 256-bit signatures, 7-day expiration
-- Authorization: Role-based access control (RBAC)
-- Token Storage: Client-side only (not in database)
+- **Password Security:** Bcrypt hashing with 10 salt rounds
+- **JWT Tokens:** 256-bit signatures, 7-day expiration
+- **Authorization:** Role-based access control (RBAC)
+- **Token Storage:** Client-side only (not in database)
 
- Data Security
+### Data Security
 
-- Encryption in Transit:  HTTPS/TLS 1.3
-- Encryption at Rest: Database-level encryption
-- SQL Injection: Parameterized queries
-- XSS Prevention: Input sanitization
-- CORS: Configured for specific origins
+- **Encryption in Transit:** HTTPS/TLS 1.3
+- **Encryption at Rest:** Database-level encryption
+- **SQL Injection:** Parameterized queries
+- **XSS Prevention:** Input sanitization
+- **CORS:** Configured for specific origins
 
- Best Practices Implemented
+### Best Practices Implemented
 
 ✅ Environment variables for secrets  
 ✅ No hardcoded credentials  
@@ -617,10 +632,11 @@ Automatic deployment on every push to `main` branch:
 ✅ Input validation on all endpoints  
 ✅ Rate limiting (planned)  
 
+---
 
- 🔮 Future Enhancements
+## 🔮 Future Enhancements
 
- Phase 1 (Short-term)
+### Phase 1 (Short-term)
 - [ ] React.js frontend application
 - [ ] Real-time notifications (WebSocket)
 - [ ] File upload for medical documents
@@ -628,7 +644,7 @@ Automatic deployment on every push to `main` branch:
 - [ ] Doctor dashboard
 - [ ] Prescription management
 
- Phase 2 (Medium-term)
+### Phase 2 (Medium-term)
 - [ ] Video consultation (WebRTC)
 - [ ] Payment gateway integration
 - [ ] Mobile app (React Native)
@@ -636,15 +652,16 @@ Automatic deployment on every push to `main` branch:
 - [ ] Analytics and reporting
 - [ ] Multi-language support
 
-Phase 3 (Long-term)
+### Phase 3 (Long-term)
 - [ ] AI-based symptom checker
 - [ ] Integration with hospital systems (HL7/FHIR)
 - [ ] Wearable device integration
 - [ ] Telemedicine insurance claims
 - [ ] ML-based appointment recommendations
 
+---
 
- 👥 Contributing
+## 👥 Contributing
 
 Contributions are welcome! Please follow these steps:
 
@@ -654,23 +671,31 @@ Contributions are welcome! Please follow these steps:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-Coding Guidelines:
+**Coding Guidelines:**
 - Follow existing code style
 - Add comments for complex logic
 - Update documentation
 - Test your changes
 
+---
 
+## 📄 License
 
-👨‍💻 Author
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Sowmya.k.c
+---
 
-- GitHub:https://github.com/Sowmya-kc
-- LinkedIn: www.linkedin.com/in/sowmya-k-c
-- Email: kvb0641@gmail.com
+## 👨‍💻 Author
 
-🙏 Acknowledgments
+**[Your Name]**
+
+- GitHub: [@your username](https://github.com/yourusername)
+- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
+- Email: your.email@example.com
+
+---
+
+## 🙏 Acknowledgments
 
 - Railway.app for database hosting
 - Render.com for application hosting
@@ -678,7 +703,23 @@ Sowmya.k.c
 - PostgreSQL documentation
 - All open-source contributors
 
+---
 
-Made with ❤️ for Cloud Computing Assignment
+## 📞 Support
 
-⭐ Star this repository if you found it helpful!
+For support, email your.email@example.com or open an issue in this repository.
+
+---
+
+## 📊 Project Stats
+
+![GitHub Stars](https://img.shields.io/github/stars/yourusername/mediconnect-backend?style=social)
+![GitHub Forks](https://img.shields.io/github/forks/yourusername/mediconnect-backend?style=social)
+![GitHub Issues](https://img.shields.io/github/issues/yourusername/mediconnect-backend)
+![GitHub Pull Requests](https://img.shields.io/github/issues-pr/yourusername/mediconnect-backend)
+
+---
+
+**Made with ❤️ for Cloud Computing Assignment**
+
+**⭐ Star this repository if you found it helpful!**
