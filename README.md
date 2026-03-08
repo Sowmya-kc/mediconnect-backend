@@ -407,7 +407,7 @@ All error responses follow this format:
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/mediconnect-backend.git
+git clone https://github.com/Sowmya-kc/mediconnect-backend.git
 cd mediconnect-backend
 ```
 
@@ -687,11 +687,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-**[Your Name]**
+**[Sowmya.k.c]**
 
-- GitHub: [@your username](https://github.com/yourusername)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
-- Email: your.email@example.com
+- GitHub:((https://github.com/Sowmya-kc))
 
 ---
 
@@ -707,7 +705,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-For support, email your.email@example.com or open an issue in this repository.
+For support, email kvb0641@gmail.com or open an issue in this repository.
 
 ---
 
